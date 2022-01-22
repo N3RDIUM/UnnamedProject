@@ -29,10 +29,11 @@ export default class Nav extends React.Component{
                         },
                         tabBarActiveTintColor: 'turquoise',
                         tabBarInactiveTintColor: 'gray',
+                        tabBarVisible: false,
                       })}
                 >
-                    <TabNav.Screen name="Splash" component={SplashScreen} />
-                    <TabNav.Screen name="Splash 2" component={SplashScreen} />
+                    <TabNav.Screen name="Splash" component={SplashScreen} options = {{headerShown: false}}/>
+                    <TabNav.Screen name="Splash 2" component={SplashScreen} options = {{headerShown: false}}/>
                 </TabNav.Navigator>
             </NavigationContainer>
         )
