@@ -27,8 +27,8 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        width: 1920,
-        height: 1080,
+        width: '100%',
+        height: '100%',
         resizeMode: 'cover',
     },
     text: {

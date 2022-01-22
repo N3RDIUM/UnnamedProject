@@ -1,15 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
+import log from './logging';
+
+log("App", "Initializing...");
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import SplashScreen from './Components/Splash';
-import config from './constants.json';
+import { StyleSheet, View } from 'react-native';
+import Nav from './navigation/tabs';
 
 export default class App extends React.Component {
   render(){
     return (
-      <View style={styles.container}>
-        <SplashScreen />
-      </View>
+      <Nav />
     );
   }
 }
