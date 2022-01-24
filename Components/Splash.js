@@ -6,13 +6,11 @@ import {
   StyleSheet,
   Text,
 } from "react-native";
-import Header from "./Header";
 
 export default class SplashScreen extends React.Component {
   render() {
     return (
       <View style={styles.View}>
-        <Header />
         <ImageBackground
           source={require("../assets/img/corona_bg.png")}
           style={styles.backgroundImage}
