@@ -25,7 +25,10 @@
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.10.2",
     "react-native-web": "0.17.1",
-    "react-navigation": "*"
+    "react-navigation": "*",
+    "node-fetch": ">=2.6.7",
+    "ansi-regex": "5.0.1",
+    "@babel/preset-env": "^7.1.6"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
