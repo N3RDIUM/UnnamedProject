@@ -8,6 +8,18 @@ import {
 } from "react-native";
 
 export default class SplashScreen extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      isLoading: true
+    }
+    this.timer = setTimeout(() => {
+      this.setState({
+        isLoading: false
+      })
+      this.props.navigation.navigate('Login')
+    }, 2000);
+  }
   render() {
     return (
       <View style={styles.View}>

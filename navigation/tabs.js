@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import * as React from 'react';
 
-import SplashScreen from '../Components/Splash';
+import HomeScreen from '../screens/home';
 
 var TabNav = createBottomTabNavigator();
 
@@ -15,12 +15,10 @@ export default class Tabs extends React.Component{
                       tabBarIcon: ({ focused, color, size }) => {
                         let iconName;
             
-                        if (route.name === 'Splash') {
+                        if (route.name === 'Home') {
                           iconName = focused
-                            ? 'ios-information-circle'
-                            : 'ios-information-circle-outline';
-                        } else if (route.name === 'Splash 2') {
-                          iconName = focused ? 'settings' : 'settings-outline';
+                            ? 'ios-home'
+                            : 'ios-home-outline';
                         }
             
                         // You can return any component that you like here!
@@ -31,8 +29,7 @@ export default class Tabs extends React.Component{
                       tabBarVisible: false,
                     })}
               >
-                  <TabNav.Screen name="Splash" component={SplashScreen} options = {{headerShown: false}}/>
-                  <TabNav.Screen name="Splash 2" component={SplashScreen} options = {{headerShown: false}}/>
+                  <TabNav.Screen name="Home" component={HomeScreen} options = {{headerShown: false}}/>
               </TabNav.Navigator>
         )
     }
