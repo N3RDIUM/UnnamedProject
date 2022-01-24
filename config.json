@@ -1,4 +1,5 @@
 {
     "app_name": "Unnamed",
-    "opening_first_time": true
+    "opening_first_time": true,
+    "test_mode": false
 }

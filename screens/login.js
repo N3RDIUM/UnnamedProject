@@ -8,6 +8,7 @@ import {
   Image
 } from "react-native";
 import * as AppAuth from 'expo-app-auth';
+import * as config from '../config';
 
 export default class SigninScreen extends React.Component{
     signInAsync = async () => {
@@ -32,6 +33,9 @@ export default class SigninScreen extends React.Component{
         }
       };
     render(){
+        if(config.test_mode){
+            this.props.navigation.navigate('home_0');
+        }
         return(
             <View style={styles.View}>
                 <ImageBackground
