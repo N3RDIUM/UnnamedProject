@@ -16,7 +16,7 @@ export default class SigninScreen extends React.Component{
                     source={require("../assets/img/corona_bg.png")}
                     style={styles.backgroundImage}
                 >
-                    <TouchableOpacity onPress={() => this.props.navigation.navigate('Home')} style={styles.button}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('home_0')} style={styles.button}>
                         <Image
                             source={require("../assets/img/google-icon.png")}
                             style={styles.image}

@@ -15,7 +15,7 @@ export default class Tabs extends React.Component{
                       tabBarIcon: ({ focused, color, size }) => {
                         let iconName;
             
-                        if (route.name === 'Home') {
+                        if (route.name === 'Home_1') {
                           iconName = focused
                             ? 'ios-home'
                             : 'ios-home-outline';
@@ -29,7 +29,7 @@ export default class Tabs extends React.Component{
                       tabBarVisible: false,
                     })}
               >
-                  <TabNav.Screen name="Home" component={HomeScreen} options = {{headerShown: false}}/>
+                  <TabNav.Screen name="Home_1" component={HomeScreen} options = {{headerShown: false}}/>
               </TabNav.Navigator>
         )
     }

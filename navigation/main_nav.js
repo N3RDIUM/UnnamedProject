@@ -13,7 +13,7 @@ export default class StackNav extends React.Component {
         return (
             <NavigationContainer>
                 <Stack.Navigator initialRouteName = "Splash">
-                    <Stack.Screen name="Home" component={Drawer} options = {{headerShown: false}}/>
+                    <Stack.Screen name="home_0" component={Drawer} options = {{headerShown: false}}/>
                     <Stack.Screen name="Splash" component={SplashScreen} options = {{headerShown: false}}/>
                     <Stack.Screen name="Login" component={Login} options = {{headerShown: false}}/>
                 </Stack.Navigator>
