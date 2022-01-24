@@ -7,8 +7,30 @@ import {
   TouchableOpacity,
   Image
 } from "react-native";
+import * as AppAuth from 'expo-app-auth';
 
 export default class SigninScreen extends React.Component{
+    signInAsync = async () => {
+        try {
+          const conf = {
+            webClientId:
+              '203956731717-df0c28ca79tufbgntavs5tl4b903u4vv.apps.googleusercontent.com',
+            androidClientId:
+              '203956731717-dg1i9nddqb83jt6jarq6s44ck0r69ecb.apps.googleusercontent.com',
+            scopes: ['profile', 'email'],
+          }
+          let result = await AppAuth.authAsync(config);
+          if (result.type === 'success') {
+            console.log(result.accessToken);
+            this.props.navigation.navigate('dashboard');
+          } else {
+            return { cancelled: true };
+          }
+        } catch (e) {
+            //console.log(e.message);
+            return { error: true };
+        }
+      };
     render(){
         return(
             <View style={styles.View}>
@@ -16,7 +38,9 @@ export default class SigninScreen extends React.Component{
                     source={require("../assets/img/corona_bg.png")}
                     style={styles.backgroundImage}
                 >
-                    <TouchableOpacity onPress={() => this.props.navigation.navigate('home_0')} style={styles.button}>
+                    <TouchableOpacity onPress={() => {
+                        this.signInAsync();
+                    }} style={styles.button}>
                         <Image
                             source={require("../assets/img/google-icon.png")}
                             style={styles.image}
